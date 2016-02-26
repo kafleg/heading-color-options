@@ -13,13 +13,13 @@ Domain Path: /languages
 Text Domain: heading-color-options
 */
 
-//loads the text domain for translation
+//loads the text domain for translation easily
 function wp_custom_color_load_plugin_textdomain() {
 	load_plugin_textdomain( 'heading-color-options', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'plugins_loaded', 'wp_custom_color_load_plugin_textdomain' );
 
-//Heading Color Options on Customizer
+//Heading Color Options on Customizer, you can change the heading color easily from customizer.
 function wp_custom_color_register( $wp_customize ){
 				$wp_customize->add_panel( 'wp_custom_color_section_panel', array(
 					'priority' => 10,
